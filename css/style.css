@@ -1,0 +1,472 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* slika pozadine prva */
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#1f1e0f), url("../img1/judge-gavel-and-law-books.jpg") ;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+/* Logo  */
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+/* text na prvoj slici */
+.banner-text{
+    text-align: center;
+    color: wheat;
+    padding-top: 180px;
+}
+/* naslov na prvoj slici */
+.banner-text h1{
+    font-size: 70px;
+}
+/* podnaslov na prvoj slici */
+.banner-text p{
+    font-size: 30px;
+    font-style: italic;
+}
+/* Dugmici na glavnoj strani */
+.banner-btn{
+    margin: 70px auto 0;
+}
+/* Dugmici na gladvnoj strani a tag */
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: wheat;
+    border: 1px solid white  ;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s; 
+}
+/* annimacija na dugmicima */
+.banner-btn a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: -1;
+    transition: 0.5s;
+}
+/* da prekrije kada predjes misem */
+.banner-btn a:hover span{
+    width: 100%;
+}
+/* u koju boju menja text na dugmetu */
+.banner-btn a:hover {
+    color: black;
+}
+/* Side menu- podesavanje menia zakucn fiksno sa sirinom i duzinom  */
+#sideNav{
+    width: 250px;  
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #1f1e0f;
+    z-index: 2;
+    transition: 0.5s;
+}
+/* skidanje ukrasa i dodavanje margine  */
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+/* skidanje underline i boji u belo slova */
+nav ul li a{
+    text-decoration: none;
+    color: wheat;
+}
+/* Podesavanje bloka za sideMenu  i davanje veceg z-indeksa da bi dosla do izrazaja */
+#manuBtn{
+    width: 50px;    
+    height: 50px;
+    background: #1f1e0f;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+/* podesavanje velicine ikone */
+#manuBtn img{
+    width: 20px;
+    margin-top:15px ;
+}
+/* Regulisane velicine za manje ekrane ---Naslov i dugmici  */
+@media screen and (max-width: 770px) {
+    .banner-text h1{
+        font-size: 44px;
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+/* feature */
+
+#feature{
+    width: 100%;
+    padding: 70px 0;
+}
+/* podesavanje naslova na sredinu ekrana */
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+/* boji text i bolduj */
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color: #1f1e0f;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display:inline-block;
+}
+/* pravljenje ikonice da izgleda kao list */
+.title-text p::after{
+    content: "";
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#1f1e0f,#fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.title-text h1{
+    font-size: 50px;
+}
+/* podesavanje  */
+.feature-box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+/* primaklo je naslova za 50% na levo */
+.feature{
+    flex-basis: 50%;
+}
+.feature-img{
+    flex-basis:50%;
+    margin: auto;
+}
+/* podesavanje velicine slike  u drugom delu */
+.feature-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+/* podesavanje naslova u drugom delu */
+.feature h1{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #1f1e0f;
+}
+.features-desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+/* pravljnje ikonice */
+.feature-icon i img{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    background-color: wheat;
+    border: 1px solid #1f1e0f;
+}
+/* tekst pored ikonice ikonice  */
+.feature-text p{
+    padding: 0 20px;
+    text-align: initial;
+}
+/* podesavanje za manju rezzz.. */
+@media screen and (max-width: 770px) {
+    .title-text h1{
+        font-size: 35px;
+    }
+    .feature{
+        flex-basis: 100%;
+    }
+    .feature-img{
+        flex-basis:100%;
+       
+    }
+    .feature-img img{
+        width: 100%;
+
+    }
+    }
+
+    /* SERVICE */
+/* podesavanje velicine service dela */
+    #service{
+        width: 100%;
+        padding: 70px 0;
+        background: #efefef;
+    }
+    /* box u kome su smestene slike oderdjivanje velicine i razmaci izmedju slika */
+    .service-box{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+        
+    }
+    /* div u kome se nalzi slika i njegovo centriranje */
+    .single-service{
+        flex-basis: 48%;
+        text-align: center;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        color: white;
+        position: relative;
+        /* background-color: black; */
+    }
+    /* velicina slike u divu i zakrivljene ivice */
+    .single-service img{
+        width: 100%;
+        border-radius: 7px;
+    }
+    /* dodavanje overley na slici sa opascity :0 */
+    .overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        border-radius: 7px;
+        cursor: pointer;
+        background: linear-gradient(rgba(0,0,0,0.5),#1f1e0f);
+        opacity: 0;
+        transition: 1s;
+    }  
+    /* dodavanje na slici sa opascity : 1 da se prikaze kada predjemo misem preko slike*/
+
+    .single-service:hover .overlay{
+        opacity: 1;
+    }
+/* podesavanje tksta na slici na bootom se stavlja 0 zbog skrivanja tektsa  */
+    .service-dec{
+        width: 80%;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%);
+        transition: 1s;
+    }
+    .service-dec h3{
+        font-size: 2em;
+    }
+    /* podesavanje a taga naslov  */
+    .service-dec h3 a{
+        text-decoration: none;
+        color: wheat;
+    }
+    /* podesavanje hr taga  */
+    hr{
+        background: wheat;
+        height: 2px;
+        border: 0;
+        margin: 15px auto;
+        width: 70%;
+    }
+    .service-dec p{
+        font-size: 14px;
+    }
+    /* kada se predje misem preko slike da izadje tekst */
+    .single-service:hover .service-dec{
+        bottom: 40%;
+        opacity: 1;
+    }
+    @media screen and (max-width: 770px){
+        .single-service{
+            flex-basis: 100%;
+            margin-bottom: 30px;
+        }
+        .service-dec p{
+            font-size: 12px;
+        }
+        hr{
+            margin: 5px auto;
+        }
+        .single-service:hover .service-dec{
+            bottom: 25%;
+        }
+        .service-dec h3{
+            font-size: 1em;
+        }
+    }
+
+    /* TESTIMONIAL */
+
+    #testimonial{
+        width: 100%;
+        padding: 70px 0;
+    }
+    /* red sredjivanje izmedju reda */
+    .testimonial-row{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    /* sredjivanje kolene i  */
+    .testimonial-col{
+        flex-basis: 28%;
+        padding: 10px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px 3px #00968814;
+        cursor: pointer;
+        transition: transform 0.5s;
+    }
+    /* samnjivanje texta u komentaru */
+    .testimonial-col p{
+        font-size: 14px;
+    }
+    /* ceo div za komentare kako ce da se ponasa  */
+     .user{
+        display: flex;
+        align-items: center;
+        margin: 20px 0; 
+    } 
+    /* slika korisnika */
+    .user img{
+        width: 40px;
+        margin-right: 20px;
+        border-radius: 3px;
+    }
+    /* ikonica */
+    .user-info img{
+        margin-left: 10px;
+        color: #27c0ff;
+        font-size: 20px;
+    }
+    /* sredjivanje malog teksat */
+    .user-info small{
+        color: #009688;
+    } 
+    /* da ide na gore zbog misusa po Y osi */
+    .testimonial-col:hover{
+        transform: translateY(-7px);
+    }
+    @media screen and (max-width: 770px){
+        .testimonial-col{
+            flex-basis: 100%;
+        }
+    }
+
+    /* FOOTER */
+
+
+    #footer{
+        padding: 100px 0 20px;
+        background: #efefef;
+        position: relative;
+    }
+    .footer-row{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .footer-left,.footer-right{
+        flex-basis: 45%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    /* da se pomeri u desno */
+    .footer-right{
+        text-align:right;
+    }
+    .footer-right p img,.footer-left p img{
+        width: 20px;
+        cursor: pointer;
+    }
+    .footer-row h1{
+        margin: 10px 0;
+    }
+    /* razmak izmedju redova  */
+    .footer-row p{
+        line-height: 35px;
+    }
+    .footer-img{
+        max-width: 370px;
+        opacity: 0.1;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%,-50%);
+    }
+    .social-links{
+        text-align: center;
+    }
+    .social-links img{
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        line-height: 40px;
+        margin: 40px 5px 0;
+        cursor: pointer;
+        box-shadow: 2px 4px 10px 2px;
+        border-radius: 5px;
+        transition: 0.5s;
+        
+    }
+    .social-links img:hover{
+        background: lightslategray;
+        color:wheat ;
+        transform: translateY(-7px);
+    }
+    .social-links p{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    @media screen and (max-width: 770px){
+        .footer-left,.footer-right{
+            flex-basis: 100%;
+            font-size: 14px;
+        }
+        .footer-img{
+            top: 25%;
+        }
+    }
+
+    /* KONTAKT FORMA */
+#forma{
+    width: 100%;
+    padding: 70px 0;
+}
+
+
+    

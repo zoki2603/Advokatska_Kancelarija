@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* slika pozadine prva */
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.5),#1f1e0f), url("../img1/oNama.jpg") ;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+/* Logo  */
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+/* text na prvoj slici */
+.banner-text{
+    text-align: center;
+    color: wheat;
+    padding-top: 180px;
+}
+/* naslov na prvoj slici */
+.banner-text h1{
+    font-size: 70px;
+}
+/* podnaslov na prvoj slici */
+.banner-text p{
+    font-size: 30px;
+    font-style: italic;
+}
+/* navigacioni meni podesavnje pozicije i pozadine */
+.nav-menu{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #1f1e0f;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* ukloni style (tacku) iz li taga i da se poredjaju u bloku */
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 30px;
+}
+/* a tag da nema donju liniju i podesavanje velicine */
+ .nav-menu li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+    
+}
+/* skloniti sideNav kad je veca rezolucija */
+#manuBtn{
+    display: none;
+}
+/* Side menu- podesavanje menia zakucn fiksno sa sirinom i duzinom  */
+#sideNav{
+    width: 250px;  
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #1f1e0f;
+    z-index: 2;
+    transition: 0.5s;
+}
+/* skidanje ukrasa i dodavanje margine  */
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+/* skidanje underline i boji u belo slova */
+nav ul li a{
+    text-decoration: none;
+    color: wheat;
+}
+/* Podesavanje bloka za sideMenu  i davanje veceg z-indeksa da bi dosla do izrazaja */
+#manuBtn{
+    width: 50px;    
+    height: 50px;
+    background: #1f1e0f;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* podesavanje velicine ikone */
+#manuBtn img{
+    width: 20px;
+    margin-top:15px ;
+}
+/* Regulisane velicine za manje ekrane ---Naslov i dugmici  */
+@media screen and (max-width: 770px) {
+    #manuBtn{
+        display: block;
+    }
+    .nav-menu{
+        display: none;
+    }
+    .banner-text h1{
+        font-size: 44px;
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    }
+
+}
+
+ /* SERVICE */
+/* podesavanje velicine service dela */
+#service{
+    width:100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+.text{
+    width: 80%;
+    display: grid;
+    margin: 20px auto;
+    grid-template-columns: 22% 22% auto;
+    grid-template-rows: 22% auto 22%;
+    color: #1f1e0f;
+    
+    
+}
+#bold-text{
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+#light-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    opacity: 0.7;
+    margin-left: 15px;
+}
+.title-text h1{
+    color: #1f1e0f;
+    display: grid;
+    justify-content: start;
+    margin-left: 10%;
+    font-size: 2.5em;
+}
+/* prazan box kao pregrada */
+#text-3{
+    background-color: #1f1e0f;
+    opacity: 0.1;
+    height: 550px;
+}
+@media screen and (max-width: 770px){
+    #text-3{
+        display: none;
+    }
+    .text{
+        display: flex;
+        justify-content: center;
+    }
+    }
+
+
+
+    /* FOOTER */
+
+
+    #footer{
+        padding: 100px 0 20px;
+        background: #efefef;
+        position: relative;
+    }
+    .footer-row{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .footer-left,.footer-right{
+        flex-basis: 45%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    /* da se pomeri u desno */
+    .footer-right{
+        text-align:right;
+    }
+    .footer-right p img,.footer-left p img{
+        width: 20px;
+        cursor: pointer;
+    }
+    .footer-row h1{
+        margin: 10px 0;
+    }
+    .title-text-footer h1{
+        display: flex;
+        font-size: 2.5em;
+        justify-content: center;
+    }
+    /* razmak izmedju redova  */
+    .footer-row p{
+        line-height: 35px;
+    }
+    .footer-img{
+        max-width: 370px;
+        opacity: 0.1;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%,-50%);
+    }
+    .social-links{
+        text-align: center;
+    }
+    .social-links img{
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        line-height: 40px;
+        margin: 40px 5px 0;
+        cursor: pointer;
+        box-shadow: 2px 4px 10px 2px;
+        border-radius: 5px;
+        transition: 0.5s;
+        
+    }
+    .social-links img:hover{
+        background: lightslategray;
+        color:wheat ;
+        transform: translateY(-7px);
+    }
+    .social-links p{
+        font-size: 12px;
+        margin-top: 20px;
+    }
+    @media screen and (max-width: 770px){
+        .footer-left,.footer-right{
+            flex-basis: 100%;
+            font-size: 14px;
+        }
+        .footer-img{
+            top: 25%;
+        }
+    }
+
+
+
+
